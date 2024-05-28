@@ -170,7 +170,7 @@
       "microblaze_0": {
         "vlnv": "xilinx.com:ip:microblaze:11.0",
         "xci_name": "mb_design_microblaze_0_0",
-        "xci_path": "ip\\mb_design_microblaze_0_0\\mb_design_microblaze_0_0.xci",
+        "xci_path": "ip/mb_design_microblaze_0_0/mb_design_microblaze_0_0.xci",
         "inst_hier_path": "microblaze_0",
         "parameters": {
           "C_DEBUG_ENABLED": {
@@ -268,7 +268,7 @@
           "dlmb_v10": {
             "vlnv": "xilinx.com:ip:lmb_v10:3.0",
             "xci_name": "mb_design_dlmb_v10_0",
-            "xci_path": "ip\\mb_design_dlmb_v10_0\\mb_design_dlmb_v10_0.xci",
+            "xci_path": "ip/mb_design_dlmb_v10_0/mb_design_dlmb_v10_0.xci",
             "inst_hier_path": "microblaze_0_local_memory/dlmb_v10",
             "interface_ports": {
               "LMB_M": {
@@ -283,7 +283,7 @@
           "ilmb_v10": {
             "vlnv": "xilinx.com:ip:lmb_v10:3.0",
             "xci_name": "mb_design_ilmb_v10_0",
-            "xci_path": "ip\\mb_design_ilmb_v10_0\\mb_design_ilmb_v10_0.xci",
+            "xci_path": "ip/mb_design_ilmb_v10_0/mb_design_ilmb_v10_0.xci",
             "inst_hier_path": "microblaze_0_local_memory/ilmb_v10",
             "interface_ports": {
               "LMB_M": {
@@ -298,7 +298,7 @@
           "dlmb_bram_if_cntlr": {
             "vlnv": "xilinx.com:ip:lmb_bram_if_cntlr:4.0",
             "xci_name": "mb_design_dlmb_bram_if_cntlr_0",
-            "xci_path": "ip\\mb_design_dlmb_bram_if_cntlr_0\\mb_design_dlmb_bram_if_cntlr_0.xci",
+            "xci_path": "ip/mb_design_dlmb_bram_if_cntlr_0/mb_design_dlmb_bram_if_cntlr_0.xci",
             "inst_hier_path": "microblaze_0_local_memory/dlmb_bram_if_cntlr",
             "parameters": {
               "C_ECC": {
@@ -319,7 +319,7 @@
           "ilmb_bram_if_cntlr": {
             "vlnv": "xilinx.com:ip:lmb_bram_if_cntlr:4.0",
             "xci_name": "mb_design_ilmb_bram_if_cntlr_0",
-            "xci_path": "ip\\mb_design_ilmb_bram_if_cntlr_0\\mb_design_ilmb_bram_if_cntlr_0.xci",
+            "xci_path": "ip/mb_design_ilmb_bram_if_cntlr_0/mb_design_ilmb_bram_if_cntlr_0.xci",
             "inst_hier_path": "microblaze_0_local_memory/ilmb_bram_if_cntlr",
             "parameters": {
               "C_ECC": {
@@ -330,7 +330,7 @@
           "lmb_bram": {
             "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
             "xci_name": "mb_design_lmb_bram_0",
-            "xci_path": "ip\\mb_design_lmb_bram_0\\mb_design_lmb_bram_0.xci",
+            "xci_path": "ip/mb_design_lmb_bram_0/mb_design_lmb_bram_0.xci",
             "inst_hier_path": "microblaze_0_local_memory/lmb_bram",
             "parameters": {
               "Memory_Type": {
@@ -403,7 +403,7 @@
       },
       "microblaze_0_axi_periph": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
-        "xci_path": "ip\\mb_design_microblaze_0_axi_periph_0\\mb_design_microblaze_0_axi_periph_0.xci",
+        "xci_path": "ip/mb_design_microblaze_0_axi_periph_0/mb_design_microblaze_0_axi_periph_0.xci",
         "inst_hier_path": "microblaze_0_axi_periph",
         "xci_name": "mb_design_microblaze_0_axi_periph_0",
         "parameters": {
@@ -621,7 +621,7 @@
           "xbar": {
             "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
             "xci_name": "mb_design_xbar_0",
-            "xci_path": "ip\\mb_design_xbar_0\\mb_design_xbar_0.xci",
+            "xci_path": "ip/mb_design_xbar_0/mb_design_xbar_0.xci",
             "inst_hier_path": "microblaze_0_axi_periph/xbar",
             "parameters": {
               "NUM_MI": {
@@ -1320,7 +1320,7 @@
       "microblaze_0_axi_intc": {
         "vlnv": "xilinx.com:ip:axi_intc:4.1",
         "xci_name": "mb_design_microblaze_0_axi_intc_0",
-        "xci_path": "ip\\mb_design_microblaze_0_axi_intc_0\\mb_design_microblaze_0_axi_intc_0.xci",
+        "xci_path": "ip/mb_design_microblaze_0_axi_intc_0/mb_design_microblaze_0_axi_intc_0.xci",
         "inst_hier_path": "microblaze_0_axi_intc",
         "parameters": {
           "C_HAS_FAST": {
@@ -1331,7 +1331,7 @@
       "microblaze_0_xlconcat": {
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "xci_name": "mb_design_microblaze_0_xlconcat_0",
-        "xci_path": "ip\\mb_design_microblaze_0_xlconcat_0\\mb_design_microblaze_0_xlconcat_0.xci",
+        "xci_path": "ip/mb_design_microblaze_0_xlconcat_0/mb_design_microblaze_0_xlconcat_0.xci",
         "inst_hier_path": "microblaze_0_xlconcat",
         "parameters": {
           "NUM_PORTS": {
@@ -1342,13 +1342,13 @@
       "mdm_1": {
         "vlnv": "xilinx.com:ip:mdm:3.2",
         "xci_name": "mb_design_mdm_1_0",
-        "xci_path": "ip\\mb_design_mdm_1_0\\mb_design_mdm_1_0.xci",
+        "xci_path": "ip/mb_design_mdm_1_0/mb_design_mdm_1_0.xci",
         "inst_hier_path": "mdm_1"
       },
       "clk_wiz_1": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "xci_name": "mb_design_clk_wiz_1_0",
-        "xci_path": "ip\\mb_design_clk_wiz_1_0\\mb_design_clk_wiz_1_0.xci",
+        "xci_path": "ip/mb_design_clk_wiz_1_0/mb_design_clk_wiz_1_0.xci",
         "inst_hier_path": "clk_wiz_1",
         "parameters": {
           "CLK_IN1_BOARD_INTERFACE": {
@@ -1374,7 +1374,7 @@
       "rst_clk_wiz_1_100M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "mb_design_rst_clk_wiz_1_100M_0",
-        "xci_path": "ip\\mb_design_rst_clk_wiz_1_100M_0\\mb_design_rst_clk_wiz_1_100M_0.xci",
+        "xci_path": "ip/mb_design_rst_clk_wiz_1_100M_0/mb_design_rst_clk_wiz_1_100M_0.xci",
         "inst_hier_path": "rst_clk_wiz_1_100M",
         "parameters": {
           "RESET_BOARD_INTERFACE": {
@@ -1388,7 +1388,7 @@
       "axi_gpio_switches": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "mb_design_axi_gpio_0_0",
-        "xci_path": "ip\\mb_design_axi_gpio_0_0\\mb_design_axi_gpio_0_0.xci",
+        "xci_path": "ip/mb_design_axi_gpio_0_0/mb_design_axi_gpio_0_0.xci",
         "inst_hier_path": "axi_gpio_switches",
         "parameters": {
           "C_INTERRUPT_PRESENT": {
@@ -1405,7 +1405,7 @@
       "axi_gpio_leds": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "mb_design_axi_gpio_1_0",
-        "xci_path": "ip\\mb_design_axi_gpio_1_0\\mb_design_axi_gpio_1_0.xci",
+        "xci_path": "ip/mb_design_axi_gpio_1_0/mb_design_axi_gpio_1_0.xci",
         "inst_hier_path": "axi_gpio_leds",
         "parameters": {
           "GPIO_BOARD_INTERFACE": {
@@ -1419,7 +1419,7 @@
       "axi_gpio_buttons": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "mb_design_axi_gpio_2_0",
-        "xci_path": "ip\\mb_design_axi_gpio_2_0\\mb_design_axi_gpio_2_0.xci",
+        "xci_path": "ip/mb_design_axi_gpio_2_0/mb_design_axi_gpio_2_0.xci",
         "inst_hier_path": "axi_gpio_buttons",
         "parameters": {
           "C_INTERRUPT_PRESENT": {
@@ -1436,7 +1436,7 @@
       "axi_gpio_displays": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "mb_design_axi_gpio_3_0",
-        "xci_path": "ip\\mb_design_axi_gpio_3_0\\mb_design_axi_gpio_3_0.xci",
+        "xci_path": "ip/mb_design_axi_gpio_3_0/mb_design_axi_gpio_3_0.xci",
         "inst_hier_path": "axi_gpio_displays",
         "parameters": {
           "C_DOUT_DEFAULT": {
@@ -1459,7 +1459,7 @@
       "axi_uartlite_0": {
         "vlnv": "xilinx.com:ip:axi_uartlite:2.0",
         "xci_name": "mb_design_axi_uartlite_0_0",
-        "xci_path": "ip\\mb_design_axi_uartlite_0_0\\mb_design_axi_uartlite_0_0.xci",
+        "xci_path": "ip/mb_design_axi_uartlite_0_0/mb_design_axi_uartlite_0_0.xci",
         "inst_hier_path": "axi_uartlite_0",
         "parameters": {
           "UARTLITE_BOARD_INTERFACE": {
@@ -1473,7 +1473,7 @@
       "axi_timer_0": {
         "vlnv": "xilinx.com:ip:axi_timer:2.0",
         "xci_name": "mb_design_axi_timer_0_0",
-        "xci_path": "ip\\mb_design_axi_timer_0_0\\mb_design_axi_timer_0_0.xci",
+        "xci_path": "ip/mb_design_axi_timer_0_0/mb_design_axi_timer_0_0.xci",
         "inst_hier_path": "axi_timer_0",
         "parameters": {
           "enable_timer2": {
@@ -1484,7 +1484,7 @@
       "fit_timer_0": {
         "vlnv": "xilinx.com:ip:fit_timer:2.0",
         "xci_name": "mb_design_fit_timer_0_0",
-        "xci_path": "ip\\mb_design_fit_timer_0_0\\mb_design_fit_timer_0_0.xci",
+        "xci_path": "ip/mb_design_fit_timer_0_0/mb_design_fit_timer_0_0.xci",
         "inst_hier_path": "fit_timer_0",
         "parameters": {
           "C_NO_CLOCKS": {
@@ -1495,7 +1495,7 @@
       "ConvolutionCop_0": {
         "vlnv": "xilinx.com:user:ConvolutionCop:1.0",
         "xci_name": "mb_design_ConvolutionCop_0_0",
-        "xci_path": "ip\\mb_design_ConvolutionCop_0_0\\mb_design_ConvolutionCop_0_0.xci",
+        "xci_path": "ip/mb_design_ConvolutionCop_0_0/mb_design_ConvolutionCop_0_0.xci",
         "inst_hier_path": "ConvolutionCop_0"
       }
     },

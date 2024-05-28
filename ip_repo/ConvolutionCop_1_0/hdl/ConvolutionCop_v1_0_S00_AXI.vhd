@@ -112,6 +112,8 @@ architecture arch_imp of ConvolutionCop_v1_0_S00_AXI is
 	signal slv_reg1	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	signal slv_reg2	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	signal slv_reg3	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+	signal slv_convolResult	:std_logic_vector(63 downto 0);
+	signal slv_convol	:std_logic_vector(63 downto 0);
 	signal slv_reg_rden	: std_logic;
 	signal slv_reg_wren	: std_logic;
 	signal reg_data_out	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
@@ -359,7 +361,7 @@ begin
 	      when b"10" =>
 	        reg_data_out <= slv_reg2;
 	      when b"11" =>
-	        reg_data_out <= slv_reg3;
+	        reg_data_out <= slv_convolResult(31 downto 0); --slv_reg3;
 	      when others =>
 	        reg_data_out  <= (others => '0');
 	    end case;
@@ -385,6 +387,10 @@ begin
 
 
 	-- Add user logic here
+        slv_convol <= std_logic_vector(unsigned(slv_reg0) * unsigned(slv_reg1));
+        slv_convolResult <= std_logic_vector(unsigned(slv_convol) + unsigned(slv_reg2));
+        --slv_convolResult <= slv_convolResult or slv_reg3(4 downto 0);
+        
 
 	-- User logic ends
 

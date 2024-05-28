@@ -13,7 +13,7 @@ view structure
 
 do {mb_design.udo}
 
-run 1000ns
+run
 
 endsim
 

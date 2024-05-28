@@ -54,11 +54,11 @@ vmap axi_timer_v2_0_29 riviera/axi_timer_v2_0_29
 vmap fit_timer_v2_0_10 riviera/fit_timer_v2_0_10
 
 vlog -work xpm  -sv2k12 "+incdir+../../../../hardwareAcceleration.gen/sources_1/bd/mb_design/ipshared/ec67/hdl" "+incdir+../../../../hardwareAcceleration.gen/sources_1/bd/mb_design/ipshared/7698" \
-"D:/programs/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-"D:/programs/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+"/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+"/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -93  \
-"D:/programs/Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhd" \
+"/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vcom -work microblaze_v11_0_10 -93  \
 "../../../../hardwareAcceleration.gen/sources_1/bd/mb_design/ipshared/1f7b/hdl/microblaze_v11_0_vh_rfs.vhd" \
@@ -182,10 +182,10 @@ vcom -work fit_timer_v2_0_10 -93  \
 
 vcom -work xil_defaultlib -93  \
 "../../../bd/mb_design/ip/mb_design_fit_timer_0_0/sim/mb_design_fit_timer_0_0.vhd" \
-"../../../bd/mb_design/sim/mb_design.vhd" \
 "../../../bd/mb_design/ipshared/d00e/hdl/ConvolutionCop_v1_0_S00_AXI.vhd" \
 "../../../bd/mb_design/ipshared/d00e/hdl/ConvolutionCop_v1_0.vhd" \
 "../../../bd/mb_design/ip/mb_design_ConvolutionCop_0_0/sim/mb_design_ConvolutionCop_0_0.vhd" \
+"../../../bd/mb_design/sim/mb_design.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"
