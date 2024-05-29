@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
---Date        : Tue May 28 23:58:39 2024
+--Date        : Wed May 29 14:55:22 2024
 --Host        : aluno-5004.wireless.ua.pt running 64-bit unknown
 --Command     : generate_target mb_design.bd
 --Design      : mb_design

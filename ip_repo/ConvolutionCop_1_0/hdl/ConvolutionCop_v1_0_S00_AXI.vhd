@@ -104,21 +104,24 @@ architecture arch_imp of ConvolutionCop_v1_0_S00_AXI is
 	-- ADDR_LSB = 3 for 64 bits (n downto 3)
 	constant ADDR_LSB  : integer := (C_S_AXI_DATA_WIDTH/32)+ 1;
 	constant OPT_MEM_ADDR_BITS : integer := 1;
-	------------------------------------------------
-	---- Signals for user logic register space example
 	--------------------------------------------------
 	---- Number of Slave Registers 4
 	signal slv_reg0	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	signal slv_reg1	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	signal slv_reg2	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	signal slv_reg3	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
-	signal slv_convolResult	:std_logic_vector(63 downto 0);
-	signal slv_convol	:std_logic_vector(63 downto 0);
 	signal slv_reg_rden	: std_logic;
 	signal slv_reg_wren	: std_logic;
 	signal reg_data_out	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	signal byte_index	: integer;
 	signal aw_en	: std_logic;
+	
+	------------------------------------------------
+	---- Signals for user logic register space example
+	signal slv_convolResult	:std_logic_vector(63 downto 0);
+	signal slv_convol	:std_logic_vector(63 downto 0);
+	signal shift_num : integer;
+	
 
 begin
 	-- I/O Connections assignments
@@ -387,11 +390,43 @@ begin
 
 
 	-- Add user logic here
-        slv_convol <= std_logic_vector(unsigned(slv_reg0) * unsigned(slv_reg1));
-        slv_convolResult <= std_logic_vector(unsigned(slv_convol) + unsigned(slv_reg2));
-        --slv_convolResult <= slv_convolResult or slv_reg3(4 downto 0);
+	--point-by-point multiplication and sum of the results with the accumulated value
+	shift_num <= to_integer(unsigned(slv_reg3)); --shift_number 
+	
+	process(S_AXI_ACLK)
+	   begin
+	       if (rising_edge (S_AXI_ACLK)) then
+	           if ( S_AXI_ARESETN = '0' ) then
+	               slv_convol  <= (others => '0');
+	               slv_convolResult  <= (others => '0');
+	           else
+	              slv_convol <= std_logic_vector(unsigned(slv_reg0) * unsigned(slv_reg1));
+	              if  to_integer(unsigned(slv_reg2)) > 0 then
+	                   slv_convol <= std_logic_vector(unsigned(slv_convol) + unsigned(slv_reg2));
+	              end if;
+	              
+	               if shift_num > 0 then 
+                      slv_convolResult <= '0' & slv_convol(63 downto 1); --deslocamento a dirita; 
+                   end if;
+	           end if; 
+	       end if;
+	   end process;
         
-
+--        process(S_AXI_ACLK)
+--            begin
+--                if (rising_edge (S_AXI_ACLK)) then
+--                   if ( S_AXI_ARESETN = '0' ) then
+--                        slv_convolResult  <= (others => '0');
+--                   else
+--                      if shift_num > 0 then
+--                          for i in 0 to to_integer(unsigned(slv_reg3)) loop
+--                                slv_convolResult <= '0' & slv_convol(63 downto 1); --deslocamento a dirita; 
+--                                slv_convol <= slv_convolResult;
+--                          end loop;
+--                      end if;
+--                   end if; 
+--	           end if;
+--        end process;
 	-- User logic ends
 
 end arch_imp;
