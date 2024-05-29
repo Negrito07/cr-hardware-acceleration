@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.runs/synth_1/mb_design_wrapper.tcl"
+  variable script "/home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.runs/synth_1/mb_design_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -77,52 +78,52 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.cache/wt [current_project]
-set_property parent.project_path D:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.xpr [current_project]
+set_property webtalk.parent_dir /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.cache/wt [current_project]
+set_property parent.project_path /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:nexys4:part0:1.1 [current_project]
-set_property ip_repo_paths d:/ua/cr/projeto/ip_repo/ConvolutionCop_1_0 [current_project]
+set_property ip_repo_paths /home/rosario/Documents/CR/cr-hardware-acceleration/ip_repo/ConvolutionCop_1_0 [current_project]
 update_ip_catalog
-set_property ip_output_repo d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.cache/ip [current_project]
+set_property ip_output_repo /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib D:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.srcs/sources_1/imports/hdl/mb_design_wrapper.vhd
-add_files D:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.srcs/sources_1/bd/mb_design/mb_design.bd
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_microblaze_0_0/mb_design_microblaze_0_0.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_microblaze_0_0/mb_design_microblaze_0_0_ooc_debug.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_lmb_bram_0/mb_design_lmb_bram_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_microblaze_0_axi_intc_0/mb_design_microblaze_0_axi_intc_0.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_microblaze_0_axi_intc_0/mb_design_microblaze_0_axi_intc_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_microblaze_0_axi_intc_0/mb_design_microblaze_0_axi_intc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_mdm_1_0/mb_design_mdm_1_0.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_mdm_1_0/mb_design_mdm_1_0_ooc_trace.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_clk_wiz_1_0/mb_design_clk_wiz_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_clk_wiz_1_0/mb_design_clk_wiz_1_0.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_clk_wiz_1_0/mb_design_clk_wiz_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_rst_clk_wiz_1_100M_0/mb_design_rst_clk_wiz_1_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_rst_clk_wiz_1_100M_0/mb_design_rst_clk_wiz_1_100M_0.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_0_0/mb_design_axi_gpio_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_0_0/mb_design_axi_gpio_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_0_0/mb_design_axi_gpio_0_0.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_1_0/mb_design_axi_gpio_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_1_0/mb_design_axi_gpio_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_1_0/mb_design_axi_gpio_1_0.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_2_0/mb_design_axi_gpio_2_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_2_0/mb_design_axi_gpio_2_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_2_0/mb_design_axi_gpio_2_0.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_3_0/mb_design_axi_gpio_3_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_3_0/mb_design_axi_gpio_3_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_3_0/mb_design_axi_gpio_3_0.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_uartlite_0_0/mb_design_axi_uartlite_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_uartlite_0_0/mb_design_axi_uartlite_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_uartlite_0_0/mb_design_axi_uartlite_0_0.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_timer_0_0/mb_design_axi_timer_0_0.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_timer_0_0/mb_design_axi_timer_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all D:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/mb_design_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_microblaze_0_0/data/mb_bootloop_le.elf]
+read_vhdl -library xil_defaultlib /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.srcs/sources_1/imports/hdl/mb_design_wrapper.vhd
+add_files /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.srcs/sources_1/bd/mb_design/mb_design.bd
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_microblaze_0_0/mb_design_microblaze_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_microblaze_0_0/mb_design_microblaze_0_0_ooc_debug.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_lmb_bram_0/mb_design_lmb_bram_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_microblaze_0_axi_intc_0/mb_design_microblaze_0_axi_intc_0.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_microblaze_0_axi_intc_0/mb_design_microblaze_0_axi_intc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_microblaze_0_axi_intc_0/mb_design_microblaze_0_axi_intc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_mdm_1_0/mb_design_mdm_1_0.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_mdm_1_0/mb_design_mdm_1_0_ooc_trace.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_clk_wiz_1_0/mb_design_clk_wiz_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_clk_wiz_1_0/mb_design_clk_wiz_1_0.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_clk_wiz_1_0/mb_design_clk_wiz_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_rst_clk_wiz_1_100M_0/mb_design_rst_clk_wiz_1_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_rst_clk_wiz_1_100M_0/mb_design_rst_clk_wiz_1_100M_0.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_0_0/mb_design_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_0_0/mb_design_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_0_0/mb_design_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_1_0/mb_design_axi_gpio_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_1_0/mb_design_axi_gpio_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_1_0/mb_design_axi_gpio_1_0.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_2_0/mb_design_axi_gpio_2_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_2_0/mb_design_axi_gpio_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_2_0/mb_design_axi_gpio_2_0.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_3_0/mb_design_axi_gpio_3_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_3_0/mb_design_axi_gpio_3_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_gpio_3_0/mb_design_axi_gpio_3_0.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_uartlite_0_0/mb_design_axi_uartlite_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_uartlite_0_0/mb_design_axi_uartlite_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_uartlite_0_0/mb_design_axi_uartlite_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_timer_0_0/mb_design_axi_timer_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_axi_timer_0_0/mb_design_axi_timer_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/mb_design_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.gen/sources_1/bd/mb_design/ip/mb_design_microblaze_0_0/data/mb_bootloop_le.elf]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -133,12 +134,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.srcs/constrs_1/imports/new/cor.xdc
-set_property used_in_implementation false [get_files D:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.srcs/constrs_1/imports/new/cor.xdc]
+read_xdc /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.srcs/constrs_1/imports/new/cor.xdc
+set_property used_in_implementation false [get_files /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.srcs/constrs_1/imports/new/cor.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.srcs/utils_1/imports/synth_1/mb_design_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

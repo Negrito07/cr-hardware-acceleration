@@ -407,6 +407,8 @@ begin
 	              
 	               if shift_num > 0 then 
                       slv_convolResult <= '0' & slv_convol(63 downto 1); --deslocamento a dirita; 
+                   else
+                      slv_convolResult <= slv_convol;
                    end if;
 	           end if; 
 	       end if;

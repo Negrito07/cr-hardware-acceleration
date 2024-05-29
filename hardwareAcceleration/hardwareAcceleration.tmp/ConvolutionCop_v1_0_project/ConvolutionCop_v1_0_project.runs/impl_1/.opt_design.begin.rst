@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command=".planAhead." Owner="rosario" Host="aluno-5004.wireless.ua.pt" Pid="85295">
-    </Process>
-</ProcessHandle>

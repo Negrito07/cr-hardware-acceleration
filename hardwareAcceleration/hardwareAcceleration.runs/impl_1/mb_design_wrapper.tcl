@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.runs/impl_1/mb_design_wrapper.tcl"
+  variable script "/home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.runs/impl_1/mb_design_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -122,7 +122,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 1
+  set_param chipscope.maxJobs 2
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tcsg324-1
   set_property board_part digilentinc.com:nexys4:part0:1.1 [current_project]
@@ -130,22 +130,22 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.cache/wt [current_project]
-  set_property parent.project_path D:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.xpr [current_project]
-  set_property ip_repo_paths D:/ua/cr/projeto/ip_repo/ConvolutionCop_1_0 [current_project]
+  set_property webtalk.parent_dir /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.cache/wt [current_project]
+  set_property parent.project_path /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.xpr [current_project]
+  set_property ip_repo_paths /home/rosario/Documents/CR/cr-hardware-acceleration/ip_repo/ConvolutionCop_1_0 [current_project]
   update_ip_catalog
-  set_property ip_output_repo D:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.cache/ip [current_project]
+  set_property ip_output_repo /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.runs/synth_1/mb_design_wrapper.dcp
+  add_files -quiet /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.runs/synth_1/mb_design_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files D:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.srcs/sources_1/bd/mb_design/mb_design.bd
+  add_files /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.srcs/sources_1/bd/mb_design/mb_design.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/ua/cr/projeto/hardwareAcceleration/hardwareAcceleration.srcs/constrs_1/imports/new/cor.xdc
+  read_xdc /home/rosario/Documents/CR/cr-hardware-acceleration/hardwareAcceleration/hardwareAcceleration.srcs/constrs_1/imports/new/cor.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

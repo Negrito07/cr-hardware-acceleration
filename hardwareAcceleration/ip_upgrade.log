@@ -1,6 +1,27 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Wed May 29 21:08:29 2024
+| Host         : aluno-5004.wireless.ua.pt running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_design_ConvolutionCop_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of mb_design_ConvolutionCop_0_0 (xilinx.com:user:ConvolutionCop:1.0 (Rev. 1)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 | Date         : Wed May 29 14:54:59 2024
 | Host         : aluno-5004.wireless.ua.pt running 64-bit unknown
 | Command      : upgrade_ip
